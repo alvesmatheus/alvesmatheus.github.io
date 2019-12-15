@@ -1,4 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Poppins|Source+Sans+Pro&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #0b0b0b;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.default-section {
+  min-height: 100vh;
+}
+
+.default-grid-template {
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.default-wrapper {
+  grid-column: 3 / 18;
+  grid-row: 2 / 10;
+}
+
+.round-cropper {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.highlighted {
+  color: #4bb3fd;
+}
+
+.intro-greeting {
+  color: #535353;
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.social-media-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.social-media-icon {
+  border-radius: 15%;
+  height: 3rem;
+  margin: 0rem 1rem;
+  padding: 0.25rem;
+  transition: 0.4s;
+}
+
+.social-media-icon:hover {
+  background-color: #4bb3fd;
+}
+
+#profile-img {
+  border: 3px solid #0b0b0b;
+  display: block;
+  margin: 2em auto 0em auto;
+  height: 25rem;
+  width: 25rem;
 }
