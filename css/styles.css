@@ -7,18 +7,21 @@
 
 body {
   background-color: #f4f4f4;
-  min-height: 100vh;
 }
 
 h1 {
   color: #0b0b0b;
   font-family: "Poppins", sans-serif;
-  font-size: 4.5rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .grid {
   display: grid;
+}
+
+.color-highlight {
+  color: #4bb3fd;
 }
 
 .default-section {
@@ -31,8 +34,16 @@ h1 {
 }
 
 .default-wrapper {
-  grid-column: 3 / 18;
-  grid-row: 2 / 10;
+  display: flex;
+  flex-direction: column;
+  grid-column: 3 / 19;
+  grid-row: 1 / 10;
+  justify-content: center;
+}
+
+.default-scroll {
+  grid-column: 3 / 19;
+  grid-row: 10 / 11;
 }
 
 .round-cropper {
@@ -40,40 +51,97 @@ h1 {
   object-fit: cover;
 }
 
-.highlighted {
-  color: #4bb3fd;
-}
-
 .intro-greeting {
   color: #535353;
   font-family: "Libre Baskerville", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-style: italic;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .social-media-wrapper {
   display: flex;
   justify-content: center;
-  margin: 1rem;
 }
 
 .social-media-icon {
-  border-radius: 15%;
-  height: 3rem;
+  height: 2.25rem;
   margin: 0rem 1rem;
   padding: 0.25rem;
-  transition: 0.4s;
-}
-
-.social-media-icon:hover {
-  background-color: #4bb3fd;
 }
 
 #profile-img {
   border: 3px solid #0b0b0b;
   display: block;
-  margin: 2em auto 0em auto;
-  height: 25rem;
-  width: 25rem;
+  height: 15rem;
+  margin: 1rem auto;
+  width: 15rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .intro-greeting {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-media-icon {
+    height: 3.5rem;
+    padding: 1rem;
+  }
+
+  #profile-img {
+    height: 25rem;
+    margin-bottom: 1.5rem;
+    width: 25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .intro-greeting {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-media-icon {
+    height: 5rem;
+    padding: 2rem;
+  }
+
+  #profile-img {
+    height: 35rem;
+    margin-bottom: 2rem;
+    width: 35rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-greeting {
+    font-size: 1.5rem;
+  }
+
+  .social-media-icon {
+    border-radius: 15%;
+    height: 3rem;
+    padding: 0.5rem;
+    transition: 0.4s;
+  }
+
+  .social-media-icon:hover {
+    background-color: #4bb3fd;
+  }
+
+  #profile-img {
+    height: 22rem;
+    margin-bottom: 1rem;
+    width: 22rem;
+  }
 }
